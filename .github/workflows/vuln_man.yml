@@ -111,7 +111,7 @@ jobs:
           --type docker
           --format cyclonedx
           --spec-version="1.6"
-          --project-name="${{ project }}"
+          --project-name="${{ matrix.project }}"
           --project-version="build-${{ github.run_number }}"
           -o "${{ project }}-docker_bom.json"
           ${{matrix.project}}:latest
